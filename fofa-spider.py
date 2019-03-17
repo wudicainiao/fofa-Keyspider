@@ -14,7 +14,7 @@ def task(url):
     for pages in range(1,1001):
         print(define.GREEN+"[*]current page : %s"%pages)
         try:
-            r = session.get(url+'&page=%s'%pages,headers=define.headers,proxies={"https":"http://127.0.0.1:1080"},verify=False,timeout=200)#timeout=20 proxies={"https":"socks5://127.0.0.1:1080"}
+            r = session.get(url+'&page=%s'%pages,headers=define.headers,verify=False,timeout=define.Timeout)
         except Exception as e:
             print(define.RED+e)
         try:
