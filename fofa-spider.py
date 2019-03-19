@@ -1,6 +1,7 @@
 # coding:utf-8
 import os
 import sys
+import time
 import requests
 import tableprint
 from config import *
@@ -12,11 +13,17 @@ def task(url):
     creat_txt()
     session = HTMLSession()
     for pages in range(1,1001):
+        while(True):
+            try:
+                r = session.get(url+'&page=%s'%pages,headers=define.headers,verify=False,timeout=define.Timeout,proxies={"https":"http://127.0.0.1:8080"})
+                if r.status_code == 429 or 'Retry later' in r.text:
+                    print(define.RED+"[*]已被FOFA检测延时五秒")
+                    time.sleep(5)
+                elif 'FOFA Pro' in r.text:
+                    break
+            except Exception as e:
+                raise e
         print(define.GREEN+"[*]current page : %s"%pages)
-        try:
-            r = session.get(url+'&page=%s'%pages,headers=define.headers,verify=False,timeout=define.Timeout)
-        except Exception as e:
-            print(define.RED+e)
         try:
             for i in range(2,12):
                 ip = r.html.xpath('//*[@id="ajax_content"]/div/div[%s]/div[1]/a/text()'%i)[0]
