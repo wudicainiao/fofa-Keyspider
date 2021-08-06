@@ -36,6 +36,6 @@ class define:
     Options:
         -i  ip        eg : python3 fofa-Keyspider.py -i 8.8.8.8 8.8.8.0/24 8.8.8.8/16
         -f  ip_file   eg : python3 fofa-Keyspider.py -f 1.txt
-        -k  keyword   eg : python3 fofa-Keyspider.py -k app="Solr"
+        -k  keyword   eg : python3 fofa-Keyspider.py -k dGl0bGU9IkluZGV4IG9mIg%3D%3D
     '''
 
