@@ -10,7 +10,7 @@ class define:
     filename    = 'out\\%s.xlsx' % time.strftime("%Y-%m-%d-%H-%M", time.localtime(time.time()))
 
     FOFA_EMAIL = ''
-    Apikey = '' # 使用时替换此处Apikey
+    Apikey = '' 
 
     banner = '''
 
@@ -24,7 +24,6 @@ class define:
                 (
                  ^---'
 
-    [*] Author:dacAIniao@重明安全
     '''
 
     usage = '''
@@ -34,8 +33,9 @@ class define:
         python3 fofa.py [options]
 
     Options:
-        -i  ip        eg : python3 fofa-Keyspider.py -i 8.8.8.8 8.8.8.0/24 8.8.8.8/16
-        -f  ip_file   eg : python3 fofa-Keyspider.py -f 1.txt
-        -k  keyword   eg : python3 fofa-Keyspider.py -k dGl0bGU9IkluZGV4IG9mIg%3D%3D
+        -i  ip             eg : python3 fofa-Keyspider.py -i  8.8.8.8 8.8.8.0/24 8.8.8.8/16
+        -f  ip_file        eg : python3 fofa-Keyspider.py -f  1.txt
+        -k  keyword        eg : python3 fofa-Keyspider.py -k  dGl0bGU9IkluZGV4IG9mIg%3D%3D
+        -ks keywords-file  eg : python3 fofa-Keyspider.py -ks keys.txt
     '''
 
