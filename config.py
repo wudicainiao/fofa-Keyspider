@@ -13,7 +13,7 @@ class define:
     Apikey = '' 
 
     banner = '''
-
+    
                              __..--.._
       .....              .--~  .....  `.
     .":    "`-..  .    .' ..-'"    :". `
@@ -23,7 +23,7 @@ class define:
                  /
                 (
                  ^---'
-
+    [*] Author:dacAIniao@重明安全
     '''
 
     usage = '''
